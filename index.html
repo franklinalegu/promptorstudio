@@ -4,27 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Promptor Studio — Product Showcase Storyboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Fragment+Mono&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Fragment+Mono&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-tailwind.config={theme:{extend:{fontFamily:{sans:['Geist','sans-serif'], mono:['Fragment Mono','monospace']}, colors:{ink:'#050508'}}}}
-</script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Geist','sans-serif'], mono:['Fragment Mono','monospace']}}}}</script>
 <style>
 *{ -webkit-font-smoothing:antialiased; }
 body{ background:#08080A; color:#F5F5F7; }
-.glow{ position:fixed; pointer-events:none; filter:blur(90px); opacity:.45; border-radius:9999px; }
-.glass{ background: rgba(18,18,24,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border:1px solid rgba(255,255,255,0.08); }
-.card{ background: rgba(16,16,20,0.9); border:1px solid rgba(255,255,255,0.08); }
-.chip{ background: rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.10); transition: all .16s ease; }
-.chip:hover{ background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); }
-.chip.active{ background:#A855F7; border-color:#A855F7; color:white; box-shadow:0 4px 20px rgba(168,85,247,0.35), inset 0 1px 0 rgba(255,255,255,0.2); }
-.chip.active-green{ background:#10B981; border-color:#10B981; color:white; box-shadow:0 4px 16px rgba(16,185,129,0.3); }
-.upload{ border:1.6px dashed rgba(255,255,255,0.14); transition: all .2s; }
-.upload:hover{ border-color: rgba(168,85,247,0.45); background: rgba(168,85,247,0.04); }
-.upload.has{ border-style:solid; border-color: rgba(168,85,247,0.5); background: rgba(168,85,247,0.06); }
-input, textarea, select{ background: rgba(0,0,0,0.32); border:1px solid rgba(255,255,255,0.08); transition: all .15s; }
-input:focus, textarea:focus, select:focus{ outline:none; border-color: rgba(168,85,247,0.5); background: rgba(0,0,0,0.5); }
+.glow{ position:fixed; pointer-events:none; filter:blur(90px); opacity:.42; border-radius:9999px; }
+.card{ background: rgba(16,16,20,0.92); border:1px solid rgba(255,255,255,0.08); }
+.chip{ background: rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.10); transition:all .14s; }
+.chip:hover{ background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.18); }
+.chip.active{ background:#A855F7; border-color:#A855F7; color:white; box-shadow:0 4px 18px rgba(168,85,247,.32), inset 0 1px 0 rgba(255,255,255,.18); }
+.chip.active-green{ background:#10B981; border-color:#10B981; color:white; box-shadow:0 4px 16px rgba(16,185,129,.28); }
+.chip.active-amber{ background:#F59E0B; border-color:#F59E0B; color:white; }
+.upload{ border:1.6px dashed rgba(255,255,255,0.14); transition:all .2s; }
+.upload:hover{ border-color:rgba(168,85,247,.45); background:rgba(168,85,247,.04); }
+.upload.has{ border-style:solid; border-color:rgba(168,85,247,.5); background:rgba(168,85,247,.06); }
+input, textarea, select{ background:rgba(0,0,0,0.32); border:1px solid rgba(255,255,255,0.08); }
+input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,85,247,0.5); background:rgba(0,0,0,0.5); }
 ::-webkit-scrollbar{ width:6px; height:6px }::-webkit-scrollbar-thumb{ background:rgba(255,255,255,0.12); border-radius:99px }
 </style>
 </head>
@@ -32,18 +30,16 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color: rgba(168,
 <div class="glow w-[720px] h-[720px] bg-[#7C3AED] -top-[200px] right-[-160px]"></div>
 <div class="glow w-[640px] h-[640px] bg-[#1E1B4B] top-[380px] -left-[160px]"></div>
 <div class="glow w-[560px] h-[560px] bg-[#4C1D95] bottom-[-100px] right-[28%]"></div>
-<div class="glow w-[420px] h-[420px] bg-[#2D1B4E] top-[820px] left-[22%]"></div>
+<div class="glow w-[420px] h-[420px] bg-[#2D1B4E] top-[920px] left-[22%]"></div>
 
-
-
-<!-- Title block -->
-<div class="max-w-[760px] mx-auto px-4 pt-7 pb-2">
+<!-- Title block - Promptor Studio (kept, as requested) -->
+<div class="max-w-[760px] mx-auto px-4 pt-8 pb-2">
   <div class="flex items-start gap-3">
-    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-500 flex items-center justify-center shrink-0 shadow-md">
+    <div class="w-9 h-9 bg-gradient-to-br from-violet-600 to-fuchsia-500 flex items-center justify-center shrink-0 shadow-md" style="border-radius:12px">
       <i data-lucide="camera" class="w-5 h-5 text-white"></i>
     </div>
     <div>
-      <h1 class="font-semibold text-[19px] leading-none flex items-center gap-2">Promptor Studio <span class="font-mono text-[10px] tracking-widest px-1.5 py-0.5 rounded bg-white/10 border border-white/10 text-white/50">STUDIO</span></h1>
+      <h1 class="font-semibold text-[19px] leading-none flex items-center gap-2">Promptor Studio <span class="font-mono text-[10px] tracking-widest px-1.5 py-0.5 rounded-none bg-white/10 border border-white/10 text-white/50">STUDIO</span></h1>
       <div class="font-medium text-[12px] text-white/50 -mt-0.5">Product Showcase Storyboard Prompt Generator</div>
       <p class="text-[13px] leading-[1.6] text-white/55 mt-3 max-w-[640px]">
         Fill in what you know about the product below to compile a 6-frame storyboard prompt for video tools like <span class="text-white/80">Google Flow, Runway, or Kling</span>. Leave a section blank and the studio will fill it in with something cohesive, or click <span class="text-violet-300 font-medium">AI Auto-Fill</span> to have every remaining blank suggested for you.
@@ -52,27 +48,20 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color: rgba(168,
   </div>
 </div>
 
-<!-- Form -->
 <div class="max-w-[760px] mx-auto px-4 pb-[96px] space-y-4 mt-5">
   <!-- 01 -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35 flex items-center gap-1.5"><span class="text-white/20">01</span> Product Reference Image</div>
     <div class="text-[11px] text-white/30 mt-1">Attached as-is alongside the prompt — required.</div>
-    <label id="dropZone" class="upload rounded-[12px] mt-3 p-7 flex flex-col items-center justify-center gap-2 cursor-pointer group">
+    <label id="dropZone" class="upload rounded-[12px] mt-3 p-7 flex flex-col items-center justify-center gap-2 cursor-pointer">
       <input id="fileInput" type="file" accept="image/*" class="hidden">
       <div id="uploadPrompt" class="flex flex-col items-center gap-2">
-        <div class="flex items-center gap-2 text-white/60">
-          <i data-lucide="image-plus" class="w-5 h-5"></i>
-          <span class="text-[13px] font-medium">Upload product photo</span>
-        </div>
+        <div class="flex items-center gap-2 text-white/60"><i data-lucide="image-plus" class="w-5 h-5"></i><span class="text-[13px] font-medium">Upload product photo</span></div>
         <span class="font-mono text-[10px] text-white/25">PNG or JPG · max 10 MB</span>
       </div>
       <div id="imagePreview" class="hidden w-full flex flex-col items-center gap-3">
-        <img id="previewImg" class="max-h-[220px] w-auto rounded-xl object-contain bg-black/30 border border-white/10">
-        <div class="flex items-center gap-2">
-          <span id="fileName" class="font-mono text-[11px] text-white/60"></span>
-          <button id="removeImage" class="font-mono text-[11px] px-3 py-1 rounded-none bg-white/10 border border-white/10 hover:bg-white/15">Remove</button>
-        </div>
+        <img id="previewImg" class="max-h-[220px] w-auto object-contain bg-black/30 border border-white/10" style="border-radius:12px">
+        <div class="flex items-center gap-2"><span id="fileName" class="font-mono text-[11px] text-white/60"></span><button id="removeImage" class="font-mono text-[11px] px-3 py-1 rounded-none bg-white/10 border border-white/10 hover:bg-white/15">Remove</button></div>
       </div>
     </label>
   </div>
@@ -80,92 +69,158 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color: rgba(168,
   <!-- 02 -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">02</span> Product Name</div>
-    <input id="productName" placeholder="e.g. Ultrun" class="w-full mt-3 rounded-xl px-4 py-3 text-[14px] placeholder:text-white/25">
+    <input id="productName" placeholder="e.g. Ultrun" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
   </div>
 
-  <!-- 03 -->
+  <!-- 03 Category -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="flex items-center justify-between">
       <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">03</span> Category</div>
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="categoryGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customCatWrap" class="hidden mt-3">
-      <input id="customCat" placeholder="Describe custom category..." class="w-full rounded-xl px-4 py-3 text-[14px] placeholder:text-white/25">
-    </div>
+    <div id="customCatWrap" class="hidden mt-3"><input id="customCat" placeholder="Describe custom category..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
   </div>
 
-  <!-- 04 -->
+  <!-- 04 Material -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="flex items-center justify-between">
       <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">04</span> Material / Finish</div>
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="materialGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customMatWrap" class="hidden mt-3">
-      <input id="customMat" placeholder="Describe custom material..." class="w-full rounded-xl px-4 py-3 text-[14px] placeholder:text-white/25">
-    </div>
+    <div id="customMatWrap" class="hidden mt-3"><input id="customMat" placeholder="Describe custom material..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
   </div>
 
-  <!-- 05 -->
+  <!-- 05 Product Color(s) -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="flex items-center justify-between">
       <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">05</span> Product Color(s)</div>
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-emerald-500 text-white">PICK ANY</span>
     </div>
     <div id="colorGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customColorWrap" class="hidden mt-3">
-      <input id="customColor" placeholder="Add custom color..." class="w-full rounded-xl px-4 py-3 text-[14px] placeholder:text-white/25">
-    </div>
+    <div id="customColorWrap" class="hidden mt-3"><input id="customColor" placeholder="Add custom color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
   </div>
 
-  <!-- 06 -->
+  <!-- 06 Key Features -->
   <div class="card rounded-[16px] p-5 md:p-6">
-    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">06</span> Key Feature <span class="normal-case tracking-normal text-white/20 font-mono text-[11px]">— what to showcase</span></div>
-    <input id="keyFeature" placeholder="e.g. Ultra-light carbon shell that flexes, then snaps back" class="w-full mt-3 rounded-xl px-4 py-3 text-[14px] placeholder:text-white/25">
-    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35 mt-4"><span class="text-white/20">07</span> Target Feeling</div>
-    <div id="feelingGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">06</span> Key Features</div>
+    <div class="text-[11px] text-white/30 mt-1">Up to three. Leave any blank and the studio fills the gap.</div>
+    <input id="feat1" placeholder="Feature 1 · e.g. Ultra-light carbon shell" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <input id="feat2" placeholder="Feature 2 · e.g. Adaptive cushioning" class="w-full mt-2 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <input id="feat3" placeholder="Feature 3 · e.g. 72-hour battery" class="w-full mt-2 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
   </div>
 
-  <!-- 08 -->
+  <!-- 07 Brand Name -->
   <div class="card rounded-[16px] p-5 md:p-6">
-    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">08</span> World / Setting <span class="normal-case tracking-normal text-white/20">— leave blank to auto-invent</span></div>
-    <input id="worldInput" placeholder="e.g. Rain-slick Tokyo alley at 6am, brutalist apartment with morning light" class="w-full mt-3 rounded-xl px-4 py-3 text-[14px] placeholder:text-white/25">
-    <div class="flex flex-wrap gap-1.5 mt-3" id="worldPresets">
-      <button class="preset px-2.5 py-1 rounded-none bg-white/[0.06] border border-white/10 font-mono text-[11px] text-white/60 hover:bg-white/10" data-val="Seamless studio, soft infinite light, turntable">Studio seamless</button>
-      <button class="preset px-2.5 py-1 rounded-none bg-white/[0.06] border border-white/10 font-mono text-[11px] text-white/60 hover:bg-white/10" data-val="Rainy neon city, puddle reflections, shallow depth">Rainy neon</button>
-      <button class="preset px-2.5 py-1 rounded-none bg-white/[0.06] border border-white/10 font-mono text-[11px] text-white/60 hover:bg-white/10" data-val="Sunlit brutalist interior, dust motes, warm shadows">Brutalist sunrise</button>
-      <button class="preset px-2.5 py-1 rounded-none bg-white/[0.06] border border-white/10 font-mono text-[11px] text-white/60 hover:bg-white/10" data-val="Coastal dawn, raw concrete, sea wind">Coastal dawn</button>
-    </div>
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">07</span> Brand Name</div>
+    <input id="brandName" placeholder="e.g. Ultrun" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
   </div>
 
-  <!-- 09 -->
+  <!-- 08 Brand Tone -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="flex items-center justify-between">
-      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">09</span> Format</div>
-      <span class="font-mono text-[10px] text-white/30">Optional</span>
+      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">08</span> Brand Tone / Mood</div>
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
-    <div class="grid grid-cols-2 gap-3 mt-3">
-      <div>
-        <label class="font-mono text-[10px] tracking-wide text-white/40">Duration</label>
-        <select id="durationSel" class="w-full mt-1 rounded-xl px-3 py-3 text-[13px]">
-          <option>6s bumper</option><option selected>12s — 6×2s</option><option>24s — 6×4s</option><option>30s hero</option>
-        </select>
-      </div>
-      <div>
-        <label class="font-mono text-[10px] tracking-wide text-white/40">Aspect</label>
-        <select id="aspectSel" class="w-full mt-1 rounded-xl px-3 py-3 text-[13px]">
-          <option>9:16 vertical</option><option selected>16:9 widescreen</option><option>1:1 square</option><option>4:5 portrait</option>
-        </select>
-      </div>
+    <div id="toneGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
+    <div id="customToneWrap" class="hidden mt-3"><input id="customTone" placeholder="Describe custom tone..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+  </div>
+
+  <!-- 09 Target Audience -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">09</span> Target Audience</div>
+    <input id="audience" placeholder="e.g. Urban commuters, creators, 18-34" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+  </div>
+
+  <!-- 10 Brand Color Palette -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="flex items-center justify-between">
+      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">10</span> Brand Color Palette</div>
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-emerald-500 text-white">PICK ANY</span>
     </div>
-    <label class="flex items-center gap-2 mt-3 cursor-pointer">
-      <input id="noHuman" type="checkbox" class="w-4 h-4 accent-violet-600"><span class="text-[13px] text-white/60">No humans — product only</span>
+    <div id="brandColorGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
+    <div id="customBrandColorWrap" class="hidden mt-3"><input id="customBrandColor" placeholder="Add custom brand color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+  </div>
+
+  <!-- 11 Tagline -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">11</span> Tagline / CTA</div>
+    <input id="tagline" placeholder="e.g. Move lighter. Go further." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+  </div>
+
+  <!-- 12 Background / Studio Style -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">12</span> Background / Studio Style</div>
+    <div class="text-[11px] text-white/30 mt-1">Pick a preset, describe your own, or upload a reference image to auto-describe.</div>
+    <div class="flex items-center justify-between mt-3">
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
+      <span class="font-mono text-[10px] text-white/25">or upload below</span>
+    </div>
+    <div id="bgGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
+    <div id="customBgWrap" class="hidden mt-3"><input id="customBg" placeholder="Describe custom background..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div class="mt-3 text-[11px] text-white/30">Or upload a reference image — it'll be analyzed and used instead of the options above.</div>
+    <label id="bgDropZone" class="upload rounded-[12px] mt-3 p-5 flex flex-col items-center justify-center gap-2 cursor-pointer">
+      <input id="bgFile" type="file" accept="image/*" class="hidden">
+      <div id="bgPrompt" class="flex flex-col items-center gap-2"><div class="flex items-center gap-2 text-white/60"><i data-lucide="image-plus" class="w-5 h-5"></i><span class="text-[13px] font-medium">Upload studio/background reference</span></div></div>
+      <div id="bgPreview" class="hidden w-full flex flex-col items-center gap-2"><img id="bgImg" class="max-h-[180px] w-auto object-contain bg-black/30 border border-white/10" style="border-radius:12px"><span id="bgFileName" class="font-mono text-[11px] text-white/60"></span><button id="removeBg" class="font-mono text-[11px] px-3 py-1 rounded-none bg-white/10 border border-white/10">Remove</button></div>
     </label>
   </div>
 
+  <!-- 13 Font Style -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="flex items-center justify-between">
+      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">13</span> Font Style</div>
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
+    </div>
+    <div id="fontGrid" class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3"></div>
+    <div id="customFontWrap" class="hidden mt-3"><input id="customFont" placeholder="Describe custom font..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+  </div>
+
+  <!-- 14 Text Color -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="flex items-center justify-between">
+      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">14</span> Text Color</div>
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
+    </div>
+    <div id="textColorGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
+    <div id="customTextColorWrap" class="hidden mt-3"><input id="customTextColor" placeholder="Add custom text color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+  </div>
+
+  <!-- 15 Platform -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="flex items-center justify-between">
+      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">15</span> Platform / Use Case</div>
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-emerald-500 text-white">PICK ANY</span>
+    </div>
+    <div id="platformGrid" class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3"></div>
+  </div>
+
+  <!-- 16 Aspect Ratio -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="flex items-center justify-between">
+      <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">16</span> Aspect Ratio</div>
+      <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
+    </div>
+    <div id="aspectGrid" class="grid grid-cols-2 md:grid-cols-5 gap-2 mt-3"></div>
+  </div>
+
+  <!-- 17 Use-Case Scenario -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">17</span> Use-Case Scenario</div>
+    <div class="text-[11px] text-white/30 mt-1">Optional — left blank means omitted from frame 4, unless AI Auto-Fill suggests one.</div>
+    <textarea id="useCase" rows="3" placeholder="e.g. Morning run through the city, late-night studio session..." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25 resize-none" style="border-radius:12px"></textarea>
+  </div>
+
+  <!-- 18 Lifestyle -->
+  <div class="card rounded-[16px] p-5 md:p-6">
+    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">18</span> Lifestyle / Environment Context</div>
+    <div class="text-[11px] text-white/30 mt-1">Optional — left blank means omitted from frame 5, unless AI Auto-Fill suggests one.</div>
+    <textarea id="lifestyle" rows="3" placeholder="e.g. Minimal apartment, soft daylight, linen and concrete..." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25 resize-none" style="border-radius:12px"></textarea>
+  </div>
+
   <!-- Output -->
-  <div id="outputCard" class="hidden card rounded-[16px] overflow-hidden">
+  <div id="outputCard" class="hidden card overflow-hidden" style="border-radius:16px">
     <div class="h-1 w-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-violet-400"></div>
     <div class="p-5 md:p-6">
       <div class="flex items-center justify-between">
@@ -175,19 +230,19 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color: rgba(168,
           <button id="downloadBtn" class="font-mono text-[11px] px-3 py-1.5 rounded-none bg-white/10 border border-white/10 hover:bg-white/15">.txt</button>
         </div>
       </div>
-      <div class="mt-4 p-3 rounded-xl bg-violet-600/10 border border-violet-500/20">
+      <div class="mt-4 p-3 bg-violet-600/10 border border-violet-500/20" style="border-radius:12px">
         <div class="font-mono text-[10px] tracking-[0.14em] uppercase text-violet-300">Master Prompt</div>
         <p id="masterPrompt" class="text-[13px] leading-relaxed mt-1.5 text-white/85"></p>
         <div id="masterTags" class="flex flex-wrap gap-1.5 mt-2"></div>
       </div>
       <div id="frames" class="grid gap-3 mt-3"></div>
-      <div class="mt-3 p-3 rounded-xl bg-white/[0.04] border border-white/10">
+      <div class="mt-3 p-3 bg-white/[0.04] border border-white/10" style="border-radius:12px">
         <div class="font-mono text-[11px] text-white/40 flex items-center gap-1.5"><i data-lucide="music" class="w-3.5 h-3.5"></i> Audio</div>
         <p id="audioLine" class="text-[13px] leading-relaxed mt-1 text-white/60"></p>
       </div>
       <div class="mt-4">
         <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/30">Plain text for Flow / Runway / Kling</div>
-        <textarea id="plainText" rows="10" class="w-full mt-2 rounded-xl p-3 font-mono text-[11px] leading-relaxed text-white/75 resize-none"></textarea>
+        <textarea id="plainText" rows="12" class="w-full mt-2 p-3 font-mono text-[11px] leading-relaxed text-white/75 resize-none" style="border-radius:12px; background:rgba(0,0,0,0.4)"></textarea>
       </div>
     </div>
   </div>
@@ -205,101 +260,74 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color: rgba(168,
   </div>
 </div>
 
-<div id="toast" class="fixed bottom-[80px] left-1/2 -translate-x-1/2 bg-white text-black font-mono text-[13px] px-4 py-2.5 rounded-none shadow-xl opacity-0 pointer-events-none transition z-50 flex items-center gap-2">
-  <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> <span id="toastMsg">Copied</span>
-</div>
+<div id="toast" class="fixed bottom-[80px] left-1/2 -translate-x-1/2 bg-white text-black font-mono text-[13px] px-4 py-2.5 rounded-none shadow-xl opacity-0 pointer-events-none transition z-50 flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i><span id="toastMsg">Copied</span></div>
 
 <script>
 lucide.createIcons();
 const CATS=["Footwear","Apparel","Tech Gadget","Beauty & Skincare","Home Goods","Accessory","Food & Beverage","Furniture","Custom"];
 const MATS=["Matte Finish","Glossy Finish","Metallic","Leather","Knit Fabric","Glass","Brushed Wood","Ceramic","Anodized Aluminum","Custom"];
-const COLORS=[
-  {name:"Obsidian", dot:"#0A0A0A", border:"rgba(255,255,255,0.15)"},
-  {name:"Cloud White", dot:"#F5F5F0", border:"rgba(0,0,0,0.1)"},
-  {name:"Fog Grey", dot:"#9CA3AF"},
-  {name:"Desert Sand", dot:"#D6BFA8"},
-  {name:"Walnut", dot:"#5C3A21"},
-  {name:"Forest", dot:"#1A3A2A"},
-  {name:"Ocean Blue", dot:"#1E40AF"},
-  {name:"Sunset Orange", dot:"#F97316"},
-  {name:"Berry", dot:"#BE185D"},
-  {name:"Lime Volt", dot:"#A3E635"},
-  {name:"Custom", dot:"conic-gradient(from 0deg, #A855F7, #EC4899, #F59E0B, #10B981, #06B6D4, #A855F7)"}
-];
-const FEELINGS=["Cinematic","Minimal","Cozy","Brutalist","Playful","Noir","Futuristic","Wabi-sabi"];
+const COLORS=["Stealth Black","Arctic White","Volt Green","Ocean Blue","Sunset Orange","Rose Gold","Charcoal Grey","Ivory Cream","Primary Red","Primary Blue","Primary Yellow","Slate Grey"];
+const TONES=["Sleek & Minimal","Bold & Energetic","Warm & Premium","Clinical & Precise","Luxurious","Playful & Fun","Custom"];
+const BGS=["Seamless Cyclorama (Grey)","Seamless Cyclorama (White)","Glossy Reflective Podium","Softly Lit Minimalist Set","Outdoor Natural Light","Industrial Loft","Marble Pedestal","Custom"];
+const FONTS=["Modern Sans-Serif","Elegant Serif","Bold Display","Minimal Geometric","Rounded Friendly","Custom"];
+const PLATFORMS=["Instagram Reels","TikTok","Landing Page Hero","Trade Show Display","YouTube Ad","Product Listing Video"];
+const ASPECTS=["1:1\nSquare","4:5\nPortrait","9:16\nVertical / Reels","16:9\nWidescreen","4:3\nLandscape"];
 
-let state={ category:"", material:"", colors:new Set(), feeling:"Cinematic", hasImage:false };
+let state={ category:"", material:"", colors:new Set(), tone:"", bg:"", font:"", textColor:"", platforms:new Set(), aspect:"", brandColors:new Set(), hasImage:false, hasBg:false };
 
-const catGrid=document.getElementById('categoryGrid');
-CATS.forEach(c=>{
+function makeChip(label, grid, stateKey, isMulti, isGreen, customId){
   const b=document.createElement('button');
-  b.className='chip rounded-none py-3 text-[13px] font-medium text-center px-2';
-  if(c==="Custom") b.innerHTML='<span class="inline-flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Custom</span>';
-  else b.textContent=c;
+  b.className='chip rounded-none py-3 text-[13px] font-medium text-center px-2 leading-tight';
+  if(label==="Custom") b.innerHTML='<span class="inline-flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Custom</span>';
+  else if(label.includes("\n")) b.innerHTML=label.replace("\n",'<br><span class="text-white/40 text-[11px]">')+'</span>';
+  else b.textContent=label;
   b.onclick=()=>{
-    [...catGrid.children].forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    state.category=c;
-    document.getElementById('customCatWrap').classList.toggle('hidden', c!=="Custom");
-    updateFilled();
-  };
-  catGrid.appendChild(b);
-});
-
-const matGrid=document.getElementById('materialGrid');
-MATS.forEach(m=>{
-  const b=document.createElement('button');
-  b.className='chip rounded-none py-3 text-[13px] font-medium text-center px-2';
-  if(m==="Custom") b.innerHTML='<span class="inline-flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Custom</span>';
-  else b.textContent=m;
-  b.onclick=()=>{
-    [...matGrid.children].forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    state.material=m;
-    document.getElementById('customMatWrap').classList.toggle('hidden', m!=="Custom");
-    updateFilled();
-  };
-  matGrid.appendChild(b);
-});
-
-const colorGrid=document.getElementById('colorGrid');
-COLORS.forEach(col=>{
-  const b=document.createElement('button');
-  b.className='chip rounded-none py-2.5 text-[13px] font-medium flex items-center justify-center gap-2 px-2';
-  const dot = col.name==="Custom"
-    ? `<span class="w-3.5 h-3.5 rounded-none border border-white/20" style="background:${col.dot}"></span>`
-    : `<span class="w-3.5 h-3.5 rounded-none border" style="background:${col.dot}; border-color:${col.border||'rgba(255,255,255,0.15)'}"></span>`;
-  b.innerHTML = dot + `<span>${col.name}</span>`;
-  b.onclick=()=>{
-    if(state.colors.has(col.name)){
-      state.colors.delete(col.name);
-      b.classList.remove('active-green');
+    if(isMulti){
+      const set = state[stateKey];
+      if(set.has(label)){ set.delete(label); b.classList.remove(isGreen?'active-green':'active'); }
+      else{ set.add(label); b.classList.add(isGreen?'active-green':'active'); }
+      if(label==="Custom" && customId) document.getElementById(customId).classList.toggle('hidden', !set.has("Custom") && !state[stateKey].has("Custom"));
+      // for single custom with isMulti false but label Custom, handle below
     } else {
-      // if not multi? PICK ANY = multi
-      state.colors.add(col.name);
-      b.classList.add('active-green');
-    }
-    if(col.name==="Custom"){
-      document.getElementById('customColorWrap').classList.toggle('hidden', !state.colors.has("Custom"));
+      [...grid.children].forEach(x=>x.classList.remove('active'));
+      if(state[stateKey]===label){ state[stateKey]=""; if(customId) document.getElementById(customId).classList.add('hidden'); }
+      else{ b.classList.add('active'); state[stateKey]=label; if(customId) document.getElementById(customId).classList.toggle('hidden', label!=="Custom"); }
     }
     updateFilled();
   };
-  colorGrid.appendChild(b);
-});
+  grid.appendChild(b);
+}
 
-const feelingGrid=document.getElementById('feelingGrid');
-FEELINGS.forEach(f=>{
-  const b=document.createElement('button');
-  b.className='chip rounded-none py-2.5 text-[13px] font-medium text-center';
-  b.textContent=f;
-  if(f===state.feeling) b.classList.add('active');
-  b.onclick=()=>{
-    [...feelingGrid.children].forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    state.feeling=f;
-  };
-  feelingGrid.appendChild(b);
-});
+// 03
+const catGrid=document.getElementById('categoryGrid');
+CATS.forEach(c=> makeChip(c, catGrid, 'category', false, false, 'customCatWrap'));
+// 04
+const matGrid=document.getElementById('materialGrid');
+MATS.forEach(m=> makeChip(m, matGrid, 'material', false, false, 'customMatWrap'));
+// 05
+const colorGrid=document.getElementById('colorGrid');
+COLORS.forEach(c=> makeChip(c, colorGrid, 'colors', true, true, 'customColorWrap'));
+// 08
+const toneGrid=document.getElementById('toneGrid');
+TONES.forEach(t=> makeChip(t, toneGrid, 'tone', false, false, 'customToneWrap'));
+// 10
+const brandColorGrid=document.getElementById('brandColorGrid');
+COLORS.forEach(c=> makeChip(c, brandColorGrid, 'brandColors', true, true, 'customBrandColorWrap'));
+// 12
+const bgGrid=document.getElementById('bgGrid');
+BGS.forEach(c=> makeChip(c, bgGrid, 'bg', false, false, 'customBgWrap'));
+// 13
+const fontGrid=document.getElementById('fontGrid');
+FONTS.forEach(f=> makeChip(f, fontGrid, 'font', false, false, 'customFontWrap'));
+// 14
+const textColorGrid=document.getElementById('textColorGrid');
+COLORS.forEach(c=> makeChip(c, textColorGrid, 'textColor', false, false, 'customTextColorWrap'));
+// 15
+const platGrid=document.getElementById('platformGrid');
+PLATFORMS.forEach(p=> makeChip(p, platGrid, 'platforms', true, true, null));
+// 16
+const aspectGrid=document.getElementById('aspectGrid');
+ASPECTS.forEach(a=> makeChip(a, aspectGrid, 'aspect', false, false, null));
 lucide.createIcons();
 
 function updateFilled(){
@@ -309,86 +337,97 @@ function updateFilled(){
   if(state.category) n++;
   if(state.material) n++;
   if(state.colors.size) n++;
-  if(document.getElementById('keyFeature').value.trim()) n++;
-  if(document.getElementById('worldInput').value.trim()) n++;
+  if(document.getElementById('feat1').value.trim() || document.getElementById('feat2').value.trim() || document.getElementById('feat3').value.trim()) n++;
+  if(document.getElementById('brandName').value.trim()) n++;
+  if(state.tone) n++;
+  if(document.getElementById('audience').value.trim()) n++;
+  if(state.brandColors.size) n++;
+  if(document.getElementById('tagline').value.trim()) n++;
+  if(state.bg || state.hasBg) n++;
+  if(state.font) n++;
+  if(state.textColor) n++;
+  if(state.platforms.size) n++;
+  if(state.aspect) n++;
+  if(document.getElementById('useCase').value.trim()) n++;
+  if(document.getElementById('lifestyle').value.trim()) n++;
   document.getElementById('filledCount').textContent=n;
 }
-['productName','keyFeature','worldInput'].forEach(id=> document.getElementById(id).addEventListener('input', updateFilled));
-document.getElementById('customCat')?.addEventListener('input', updateFilled);
-document.getElementById('customMat')?.addEventListener('input', updateFilled);
-document.getElementById('customColor')?.addEventListener('input', updateFilled);
+['productName','feat1','feat2','feat3','brandName','audience','tagline','useCase','lifestyle','customCat','customMat','customColor','customTone','customBrandColor','customBg','customFont','customTextColor'].forEach(id=> document.getElementById(id)?.addEventListener('input', updateFilled));
+document.getElementById('brandName')?.addEventListener('input', updateFilled);
 
 // upload
-const dropZone=document.getElementById('dropZone'), fileInput=document.getElementById('fileInput'), preview=document.getElementById('imagePreview'), uploadPrompt=document.getElementById('uploadPrompt'), previewImg=document.getElementById('previewImg'), fileNameEl=document.getElementById('fileName');
-function setFile(f){
-  if(!f) return;
-  previewImg.src=URL.createObjectURL(f);
-  fileNameEl.textContent=f.name + " · " + (f.size/1024).toFixed(0)+" KB";
-  preview.classList.remove('hidden'); uploadPrompt.classList.add('hidden'); dropZone.classList.add('has');
-  state.hasImage=true; updateFilled();
+function setupUpload(dropId, inputId, previewId, imgId, nameId, removeId, flag){
+  const dz=document.getElementById(dropId), inp=document.getElementById(inputId), prev=document.getElementById(previewId), img=document.getElementById(imgId), nameEl=document.getElementById(nameId);
+  function setFile(f){ if(!f) return; img.src=URL.createObjectURL(f); if(nameEl) nameEl.textContent=f.name+" · "+(f.size/1024).toFixed(0)+" KB"; prev.classList.remove('hidden'); document.getElementById(dropId==='dropZone'?'uploadPrompt':'bgPrompt').classList.add('hidden'); dz.classList.add('has'); state[flag]=true; updateFilled(); }
+  inp.addEventListener('change', e=>{ if(e.target.files[0]) setFile(e.target.files[0]); });
+  ['dragover','dragenter'].forEach(ev=> dz.addEventListener(ev, e=>{ e.preventDefault(); dz.style.borderColor='rgba(168,85,247,0.6)'; }));
+  dz.addEventListener('dragleave', ()=> dz.style.borderColor='');
+  dz.addEventListener('drop', e=>{ e.preventDefault(); dz.style.borderColor=''; if(e.dataTransfer.files[0]) setFile(e.dataTransfer.files[0]); });
+  document.getElementById(removeId).onclick=e=>{ e.preventDefault(); prev.classList.add('hidden'); document.getElementById(dropId==='dropZone'?'uploadPrompt':'bgPrompt').classList.remove('hidden'); dz.classList.remove('has'); inp.value=''; state[flag]=false; updateFilled(); };
 }
-fileInput.onchange=e=>{ if(e.target.files[0]) setFile(e.target.files[0]); };
-['dragover','dragenter'].forEach(ev=> dropZone.addEventListener(ev, e=>{ e.preventDefault(); dropZone.style.borderColor='rgba(168,85,247,0.6)'; }));
-dropZone.addEventListener('dragleave', ()=> dropZone.style.borderColor='');
-dropZone.addEventListener('drop', e=>{ e.preventDefault(); dropZone.style.borderColor=''; if(e.dataTransfer.files[0]) setFile(e.dataTransfer.files[0]); });
-document.getElementById('removeImage').onclick=e=>{ e.preventDefault(); preview.classList.add('hidden'); uploadPrompt.classList.remove('hidden'); dropZone.classList.remove('has'); fileInput.value=''; state.hasImage=false; updateFilled(); };
-document.querySelectorAll('.preset').forEach(b=> b.onclick=()=>{ document.getElementById('worldInput').value=b.dataset.val; updateFilled(); });
+setupUpload('dropZone','fileInput','imagePreview','previewImg','fileName','removeImage','hasImage');
+setupUpload('bgDropZone','bgFile','bgPreview','bgImg','bgFileName','removeBg','hasBg');
 
-function toast(m){
-  const el=document.getElementById('toast');
-  document.getElementById('toastMsg').textContent=m;
-  el.style.opacity=1; setTimeout(()=>el.style.opacity=0,1800);
-}
+function toast(m){ const el=document.getElementById('toast'); document.getElementById('toastMsg').textContent=m; el.style.opacity=1; setTimeout(()=>el.style.opacity=0,1800); }
 
 function autoFill(){
-  if(!state.category){ const pick=CATS[Math.floor(Math.random()*8)]; [...catGrid.children].find(b=>b.textContent.includes(pick))?.click(); }
-  if(!state.material){ const pick=MATS[Math.floor(Math.random()*9)]; [...matGrid.children].find(b=>b.textContent.includes(pick))?.click(); }
-  if(state.colors.size===0){
-    const picks=["Obsidian","Cloud White","Forest"]; picks.forEach(n=>{ const b=[...colorGrid.children].find(x=>x.textContent.includes(n)); if(b) b.click(); });
-  }
-  if(!document.getElementById('productName').value.trim()){
-    const names={Footwear:"STRIDE",Apparel:"ARC","Tech Gadget":"NOVA","Beauty & Skincare":"LUMEN","Home Goods":"HEARTH",Accessory:"LOOP","Food & Beverage":"HARVEST",Furniture:"FORM",Custom:"ATELIER"};
-    document.getElementById('productName').value=names[state.category]||"ULTRUN";
-  }
-  if(!document.getElementById('keyFeature').value.trim()){
-    const feats=["Ultra-light carbon shell that flexes then snaps back","Cold-brew extracted 18h — zero bitterness","Hand-thrown ceramic with sunrise glaze","Brushed titanium, 40% lighter, twice as strong","Knit that breathes with your stride"];
-    document.getElementById('keyFeature').value=feats[Math.floor(Math.random()*feats.length)];
-  }
-  if(!document.getElementById('worldInput').value.trim()){
-    const worlds=["Seamless studio, soft infinite light","Rain-slick alley, neon puddles","Sunlit brutalist interior, dust motes","Coastal dawn, raw concrete, sea wind"];
-    document.getElementById('worldInput').value=worlds[Math.floor(Math.random()*worlds.length)];
-  }
-  [...feelingGrid.children][Math.floor(Math.random()*feelingGrid.children.length)].click();
+  if(!state.category){ const pick=CATS[Math.floor(Math.random()*8)]; document.querySelectorAll('#categoryGrid button')[CATS.indexOf(pick)]?.click(); }
+  if(!state.material){ const pick=MATS[Math.floor(Math.random()*9)]; document.querySelectorAll('#materialGrid button')[MATS.indexOf(pick)]?.click(); }
+  if(state.colors.size===0){ ["Stealth Black","Arctic White","Volt Green"].forEach(n=>{ const i=COLORS.indexOf(n); if(i>-1) document.querySelectorAll('#colorGrid button')[i]?.click(); }); }
+  if(!state.tone){ document.querySelectorAll('#toneGrid button')[0]?.click(); }
+  if(!state.bg){ document.querySelectorAll('#bgGrid button')[0]?.click(); }
+  if(!state.font){ document.querySelectorAll('#fontGrid button')[0]?.click(); }
+  if(!state.textColor){ const i=COLORS.indexOf("Arctic White"); if(i>-1) document.querySelectorAll('#textColorGrid button')[i]?.click(); }
+  if(!state.aspect){ document.querySelectorAll('#aspectGrid button')[3]?.click(); }
+  if(state.platforms.size===0){ document.querySelectorAll('#platformGrid button')[0]?.click(); }
+  if(state.brandColors.size===0){ const i=COLORS.indexOf("Stealth Black"); if(i>-1) document.querySelectorAll('#brandColorGrid button')[i]?.click(); }
+  const brand = document.getElementById('brandName');
+  if(!brand.value.trim()) brand.value=["ULTRUN","NOVA","ARC","LUMEN"][Math.floor(Math.random()*4)];
+  if(!document.getElementById('productName').value.trim()) document.getElementById('productName').value = brand.value;
+  if(!document.getElementById('audience').value.trim()) document.getElementById('audience').value="Urban commuters, 24-38";
+  if(!document.getElementById('tagline').value.trim()) document.getElementById('tagline').value="Move lighter. Go further.";
+  const feats=["Ultra-light carbon shell that flexes then snaps back","Adaptive cushioning tuned to your stride","72-hour battery with 10-min quick charge"];
+  ['feat1','feat2','feat3'].forEach((id,i)=>{ const el=document.getElementById(id); if(!el.value.trim()) el.value=feats[i]; });
+  if(!document.getElementById('useCase').value.trim()) document.getElementById('useCase').value="Morning run through neon streets, then seamless office transition.";
+  if(!document.getElementById('lifestyle').value.trim()) document.getElementById('lifestyle').value="Minimal apartment, soft daylight, linen and concrete, lived-in premium.";
   updateFilled(); toast("Auto-filled — review and generate");
 }
 
 function build(){
   const name=document.getElementById('productName').value.trim()||"ULTRUN";
+  const brand=document.getElementById('brandName').value.trim()||name;
   const cat= state.category==="Custom" ? (document.getElementById('customCat').value.trim()||"Custom") : (state.category||"Tech Gadget");
   const mat= state.material==="Custom" ? (document.getElementById('customMat').value.trim()||"custom finish") : (state.material||"Matte Finish");
-  const colorList=[...state.colors].filter(c=>c!=="Custom");
-  const customColor=document.getElementById('customColor').value.trim();
-  if(customColor) colorList.push(customColor);
-  const colorStr=colorList.length? colorList.join(", ") : "obsidian / cloud white";
-  const feat=document.getElementById('keyFeature').value.trim()||"Designed to disappear until you need it";
-  const world=document.getElementById('worldInput').value.trim()||"seamless studio, soft infinite light";
-  const feeling=state.feeling;
-  const duration=document.getElementById('durationSel').value;
-  const aspect=document.getElementById('aspectSel').value;
-  const noHuman=document.getElementById('noHuman').checked;
+  const colors=[...state.colors].filter(c=>c!=="Custom"); if(document.getElementById('customColor').value.trim()) colors.push(document.getElementById('customColor').value.trim());
+  const colorStr=colors.length? colors.join(", ") : "Stealth Black, Arctic White";
+  const feats=[document.getElementById('feat1').value.trim(),document.getElementById('feat2').value.trim(),document.getElementById('feat3').value.trim()].filter(Boolean);
+  const featStr=feats.length? feats.join(" · ") : "Designed to disappear until you need it";
+  const tone= state.tone==="Custom" ? (document.getElementById('customTone').value.trim()||"custom tone") : (state.tone||"Sleek & Minimal");
+  const audience=document.getElementById('audience').value.trim()||"design-conscious urbanites";
+  const bColors=[...state.brandColors].filter(c=>c!=="Custom"); if(document.getElementById('customBrandColor').value.trim()) bColors.push(document.getElementById('customBrandColor').value.trim());
+  const bColorStr=bColors.length? bColors.join(", ") : colorStr;
+  const tagline=document.getElementById('tagline').value.trim()||`${brand} — Move lighter.`;
+  const bg= state.bg==="Custom" ? (document.getElementById('customBg').value.trim()||"custom studio") : (state.bg||"Seamless Cyclorama (Grey)");
+  const font= state.font==="Custom" ? (document.getElementById('customFont').value.trim()||"custom font") : (state.font||"Modern Sans-Serif");
+  const textColor= state.textColor==="Custom" ? (document.getElementById('customTextColor').value.trim()||"custom") : (state.textColor||"Arctic White");
+  const platforms=[...state.platforms].join(", ") || "Instagram Reels, TikTok";
+  const aspect= state.aspect ? state.aspect.replace("\n"," ") : "16:9 Widescreen";
+  const useCase=document.getElementById('useCase').value.trim();
+  const lifestyle=document.getElementById('lifestyle').value.trim();
+  const bgRef= state.hasBg ? " (use uploaded studio/background reference image as primary background direction)" : "";
 
-  const master=`Product: ${name} — ${cat} (${mat}, ${colorStr}). Hero: ${feat}. Feeling: ${feeling}. World: ${world}. Use attached product reference image as-is — match color, logo, and silhouette exactly. ${noHuman?"No humans — product only.":"Hands only, diverse, natural."} ${duration} total, ${aspect}, photoreal, 85mm lens, shallow depth, subtle grain. Generate as a continuous 6-frame storyboard with matching light.`;
+  const master=`Product: ${name} by ${brand} — ${cat} (${mat}, ${colorStr}). Hero: ${featStr}. Tone: ${tone}. Audience: ${audience}. Brand palette: ${bColorStr}. Tagline: "${tagline}". Background: ${bg}${bgRef}. Font: ${font} in ${textColor}. Platforms: ${platforms}. Aspect: ${aspect}. Use attached product reference image as-is — match color, logo, and silhouette exactly. Generate as a continuous 6-frame storyboard with matching light.  Photoreal, 85mm lens, shallow depth, subtle grain.`;
 
   const frames=[
-    {title:"01 — Hook / Reveal", shot:"Extreme macro, slow dolly-in", prompt:`${name} in silhouette against ${world.split(',')[0]}, camera finds ${mat.toLowerCase()} texture and ${colorStr} highlight — ${feat.toLowerCase()}. Vibe: ${feeling.toLowerCase()}. No text.`},
-    {title:"02 — World / Context", shot:"Wide, slight parallax", prompt:`Product in world: ${world}. Scale and use-case for everyday life — not a studio. Light: soft, natural, 5600K. Keep ${colorStr} true to reference.`},
-    {title:"03 — Feature Demo", shot:"Detail insert, focus pull", prompt:`Show hero feature: ${feat}. Close on ${mat.toLowerCase()} responding — tactile, believable physics.`},
-    {title:"04 — Transformation", shot:"Before → After, match-cut", prompt:`Same scene before/after using ${name}. Transformation is quiet — no CGI exaggeration. Maintain ${feeling.toLowerCase()} mood.`},
-    {title:"05 — Lifestyle / Detail", shot:"Overhead flat-lay or handheld", prompt:`${noHuman?"Product alone, centered, slow rotation.":"Hands interact — second nature, not posing."} Craft detail of ${mat.toLowerCase()} in ${feeling.toLowerCase()} light.`},
-    {title:"06 — Hero Lockup / CTA", shot:"Centered hero, slow push-in, resolve", prompt:`Final hero on ${world.split(',').pop().trim()}, ${name} centered with breathing room for logo top-right. End card: “${name} — ${feat.split(' ').slice(0,5).join(' ')}.” Hold 1s.`},
+    {title:"01 — Hook / Reveal", shot:"Extreme macro, slow dolly-in", prompt:`${name} in silhouette, camera finds ${mat.toLowerCase()} texture and ${colors[0]||colorStr} highlight — ${feats[0]||featStr}. Tone: ${tone.toLowerCase()}. World: ${bg}. No text.`},
+    {title:"02 — Product in Context", shot:"Wide, slight parallax", prompt:`${name} by ${brand} in context: ${bg}. Scale for ${audience.toLowerCase()} — real use, not studio stock. Keep ${colorStr} true to reference. Font hint: ${font} not yet visible.`},
+    {title:"03 — Feature Close", shot:"Detail insert, focus pull", prompt:`Show hero features: ${featStr}. Close on ${mat.toLowerCase()} responding — tactile, believable physics. Brand palette ${bColorStr} accent.`},
+    {title:"04 — Use-Case Scenario", shot:"Lifestyle, handheld", prompt: useCase? `Scenario: ${useCase} — ${name} performs. Tagline appears subtly at 00:07 in ${font} (${textColor}): "${tagline}".` : `Use-case beat omitted per blank — focus on ${feats[1]||"core benefit"} with ${name} in motion. Keep ${tone.toLowerCase()} energy.`},
+    {title:"05 — Environment / Lifestyle", shot:"Environment wide", prompt: lifestyle? `Environment: ${lifestyle}. ${name} belongs here — ${platforms.split(',')[0]} framing, ${aspect}. Background: ${bg}${bgRef}.` : `Environment beat omitted — product alone on ${bg}, ${mat.toLowerCase()} detail, ${bColorStr} light.`},
+    {title:"06 — Hero Lockup / CTA", shot:"Centered hero, slow push-in, resolve", prompt:`Final hero: ${name} centered on ${bg}, breathing room for logo top-right. CTA in ${font} (${textColor}): "${tagline}". Platforms: ${platforms}. Aspect ${aspect}. Hold 1s. No extra props. Use uploaded product image silhouette exactly.`},
   ];
-  const audio=`Music: ${feeling==="Cinematic"?"sparse piano + tape hiss, 78 BPM":feeling==="Playful"?"bouncy percussion + whistle, 112 BPM":feeling==="Futuristic"?"sub bass + granular synth, 96 BPM":"warm room tone + soft cloth foley, 88 BPM"}. SFX: soft ${mat.toLowerCase().includes("knit")?"fabric rustle":"whoosh, subtle material tick"}. VO (optional) at 00:08 — “${feat}.” Mix -14 LUFS.`;
-  return {master, frames, audio, meta:{name, cat, mat, colorStr, duration, aspect}};
+  const audio=`Music: ${tone.includes("Bold")?"driving percussion, 128 BPM":tone.includes("Warm")?"warm Rhodes + tape hiss, 92 BPM":tone.includes("Luxurious")?"strings + sub, 78 BPM":"pulse + airy pad, 100 BPM"}. SFX: soft ${mat.toLowerCase().includes("knit")?"fabric rustle":"whoosh, material tick"}. VO (optional) at 00:08 — "${tagline}". Mix -14 LUFS.`;
+  return {master, frames, audio, meta:{name, brand, cat, mat, colorStr, aspect}};
 }
 
 function render(board){
@@ -398,10 +437,10 @@ function render(board){
     `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white text-black">${board.meta.cat}</span>`,
     `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.mat}</span>`,
     `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.colorStr}</span>`,
-    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.duration} · ${board.meta.aspect}</span>`,
+    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.aspect}</span>`,
   ].join('');
   document.getElementById('frames').innerHTML=board.frames.map(f=>`
-    <div class="rounded-xl overflow-hidden border border-white/10 bg-black/30">
+    <div class="overflow-hidden border border-white/10 bg-black/30" style="border-radius:12px">
       <div class="flex items-center justify-between px-3 py-2 bg-white/[0.04] border-b border-white/10">
         <span class="font-mono text-[11px] text-white/80">${f.title}</span>
         <span class="font-mono text-[10px] text-white/35">${f.shot}</span>
@@ -421,7 +460,7 @@ document.getElementById('btnGenerate').onclick=()=>{
   if(!state.category){ toast("Pick a category"); return; }
   if(!document.getElementById('productName').value.trim()){ toast("Add product name"); return; }
   if(!state.material){ toast("Pick a material / finish"); return; }
-  if(state.colors.size===0){ toast("Pick at least one color"); return; }
+  if(state.colors.size===0){ toast("Pick at least one product color"); return; }
   const board=build();
   render(board);
   toast("Storyboard prompt generated");
@@ -429,27 +468,13 @@ document.getElementById('btnGenerate').onclick=()=>{
 };
 document.getElementById('btnAuto').onclick=autoFill;
 document.getElementById('btnReset').onclick=()=>{
-  document.getElementById('productName').value='';
-  document.getElementById('keyFeature').value='';
-  document.getElementById('worldInput').value='';
-  document.getElementById('customCat').value='';
-  document.getElementById('customMat').value='';
-  document.getElementById('customColor').value='';
-  document.getElementById('durationSel').selectedIndex=1;
-  document.getElementById('aspectSel').selectedIndex=1;
-  document.getElementById('noHuman').checked=false;
-  [...catGrid.children].forEach(b=>b.classList.remove('active'));
-  [...matGrid.children].forEach(b=>b.classList.remove('active'));
-  [...colorGrid.children].forEach(b=>b.classList.remove('active-green'));
-  [...feelingGrid.children].forEach((b,i)=> b.classList.toggle('active', i===0));
-  document.getElementById('customCatWrap').classList.add('hidden');
-  document.getElementById('customMatWrap').classList.add('hidden');
-  document.getElementById('customColorWrap').classList.add('hidden');
-  document.getElementById('imagePreview').classList.add('hidden');
-  document.getElementById('uploadPrompt').classList.remove('hidden');
-  document.getElementById('dropZone').classList.remove('has');
-  document.getElementById('fileInput').value='';
-  state.category=""; state.material=""; state.colors.clear(); state.feeling="Cinematic"; state.hasImage=false;
+  document.getElementById('productName').value=''; document.getElementById('brandName').value=''; document.getElementById('audience').value=''; document.getElementById('tagline').value=''; document.getElementById('useCase').value=''; document.getElementById('lifestyle').value='';
+  ['feat1','feat2','feat3','customCat','customMat','customColor','customTone','customBrandColor','customBg','customFont','customTextColor'].forEach(id=> document.getElementById(id).value='');
+  document.getElementById('customCatWrap').classList.add('hidden'); document.getElementById('customMatWrap').classList.add('hidden'); document.getElementById('customColorWrap').classList.add('hidden'); document.getElementById('customToneWrap').classList.add('hidden'); document.getElementById('customBrandColorWrap').classList.add('hidden'); document.getElementById('customBgWrap').classList.add('hidden'); document.getElementById('customFontWrap').classList.add('hidden'); document.getElementById('customTextColorWrap').classList.add('hidden');
+  document.querySelectorAll('.chip').forEach(b=> b.classList.remove('active','active-green'));
+  state.category=""; state.material=""; state.colors.clear(); state.tone=""; state.bg=""; state.font=""; state.textColor=""; state.platforms.clear(); state.aspect=""; state.brandColors.clear(); state.hasImage=false; state.hasBg=false;
+  document.getElementById('imagePreview').classList.add('hidden'); document.getElementById('uploadPrompt').classList.remove('hidden'); document.getElementById('dropZone').classList.remove('has'); document.getElementById('fileInput').value='';
+  document.getElementById('bgPreview').classList.add('hidden'); document.getElementById('bgPrompt').classList.remove('hidden'); document.getElementById('bgDropZone').classList.remove('has'); document.getElementById('bgFile').value='';
   document.getElementById('outputCard').classList.add('hidden');
   updateFilled(); toast("Reset");
 };
