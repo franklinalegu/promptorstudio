@@ -60,7 +60,7 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
         <span class="font-mono text-[10px] text-white/25">PNG or JPG · max 10 MB</span>
       </div>
       <div id="imagePreview" class="hidden w-full flex flex-col items-center gap-3">
-        <img id="previewImg" class="max-h-[220px] w-auto object-contain bg-black/30 border border-white/10" style="border-radius:12px">
+        <img id="previewImg" alt="Product preview" class="max-h-[220px] w-auto object-contain bg-black/30 border border-white/10" style="border-radius:12px">
         <div class="flex items-center gap-2"><span id="fileName" class="font-mono text-[11px] text-white/60"></span><button id="removeImage" class="font-mono text-[11px] px-3 py-1 rounded-none bg-white/10 border border-white/10 hover:bg-white/15">Remove</button></div>
       </div>
     </label>
@@ -68,8 +68,8 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
 
   <!-- 02 -->
   <div class="card rounded-[16px] p-5 md:p-6">
-    <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">02</span> Product Name</div>
-    <input id="productName" placeholder="e.g. Ultrun" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <label for="productName" class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">02</span> Product Name</label>
+    <input id="productName" name="productName" aria-label="Product Name" placeholder="e.g. Ultrun" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
   </div>
 
   <!-- 03 Category -->
@@ -79,7 +79,7 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="categoryGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customCatWrap" class="hidden mt-3"><input id="customCat" placeholder="Describe custom category..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customCatWrap" class="hidden mt-3"><input id="customCat" placeholder="Describe custom category..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 04 Material -->
@@ -89,7 +89,7 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="materialGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customMatWrap" class="hidden mt-3"><input id="customMat" placeholder="Describe custom material..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customMatWrap" class="hidden mt-3"><input id="customMat" placeholder="Describe custom material..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 05 Product Color(s) -->
@@ -99,22 +99,22 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-emerald-500 text-white">PICK ANY</span>
     </div>
     <div id="colorGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customColorWrap" class="hidden mt-3"><input id="customColor" placeholder="Add custom color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customColorWrap" class="hidden mt-3"><input id="customColor" placeholder="Add custom color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 06 Key Features -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">06</span> Key Features</div>
     <div class="text-[11px] text-white/30 mt-1">Up to three. Leave any blank and the studio fills the gap.</div>
-    <input id="feat1" placeholder="Feature 1 · e.g. Ultra-light carbon shell" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
-    <input id="feat2" placeholder="Feature 2 · e.g. Adaptive cushioning" class="w-full mt-2 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
-    <input id="feat3" placeholder="Feature 3 · e.g. 72-hour battery" class="w-full mt-2 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <label for="feat1" class="sr-only">Key Feature 1</label><input id="feat1" aria-label="Key Feature 1" placeholder="Feature 1 · e.g. Ultra-light carbon shell" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
+    <label for="feat2" class="sr-only">Key Feature 2</label><input id="feat2" aria-label="Key Feature 2" placeholder="Feature 2 · e.g. Adaptive cushioning" class="w-full mt-2 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
+    <label for="feat3" class="sr-only">Key Feature 3</label><input id="feat3" aria-label="Key Feature 3" placeholder="Feature 3 · e.g. 72-hour battery" class="w-full mt-2 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
   </div>
 
   <!-- 07 Brand Name -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">07</span> Brand Name</div>
-    <input id="brandName" placeholder="e.g. Ultrun" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <label for="brandName" class="sr-only">Brand Name</label><input id="brandName" aria-label="Brand Name" placeholder="e.g. Ultrun" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
   </div>
 
   <!-- 08 Brand Tone -->
@@ -124,13 +124,13 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="toneGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customToneWrap" class="hidden mt-3"><input id="customTone" placeholder="Describe custom tone..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customToneWrap" class="hidden mt-3"><input id="customTone" placeholder="Describe custom tone..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 09 Target Audience -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">09</span> Target Audience</div>
-    <input id="audience" placeholder="e.g. Urban commuters, creators, 18-34" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <label for="audience" class="sr-only">Target Audience</label><input id="audience" aria-label="Target Audience" placeholder="e.g. Urban commuters, creators, 18-34" class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
   </div>
 
   <!-- 10 Brand Color Palette -->
@@ -140,13 +140,13 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-emerald-500 text-white">PICK ANY</span>
     </div>
     <div id="brandColorGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customBrandColorWrap" class="hidden mt-3"><input id="customBrandColor" placeholder="Add custom brand color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customBrandColorWrap" class="hidden mt-3"><input id="customBrandColor" placeholder="Add custom brand color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 11 Tagline -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">11</span> Tagline / CTA</div>
-    <input id="tagline" placeholder="e.g. Move lighter. Go further." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px">
+    <label for="tagline" class="sr-only">Tagline</label><input id="tagline" aria-label="Tagline" placeholder="e.g. Move lighter. Go further." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px">
   </div>
 
   <!-- 12 Background / Studio Style -->
@@ -158,12 +158,12 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] text-white/25">or upload below</span>
     </div>
     <div id="bgGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customBgWrap" class="hidden mt-3"><input id="customBg" placeholder="Describe custom background..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customBgWrap" class="hidden mt-3"><input id="customBg" placeholder="Describe custom background..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
     <div class="mt-3 text-[11px] text-white/30">Or upload a reference image — it'll be analyzed and used instead of the options above.</div>
     <label id="bgDropZone" class="upload rounded-[12px] mt-3 p-5 flex flex-col items-center justify-center gap-2 cursor-pointer">
       <input id="bgFile" type="file" accept="image/*" class="hidden">
       <div id="bgPrompt" class="flex flex-col items-center gap-2"><div class="flex items-center gap-2 text-white/60"><i data-lucide="image-plus" class="w-5 h-5"></i><span class="text-[13px] font-medium">Upload studio/background reference</span></div></div>
-      <div id="bgPreview" class="hidden w-full flex flex-col items-center gap-2"><img id="bgImg" class="max-h-[180px] w-auto object-contain bg-black/30 border border-white/10" style="border-radius:12px"><span id="bgFileName" class="font-mono text-[11px] text-white/60"></span><button id="removeBg" class="font-mono text-[11px] px-3 py-1 rounded-none bg-white/10 border border-white/10">Remove</button></div>
+      <div id="bgPreview" class="hidden w-full flex flex-col items-center gap-2"><img id="bgImg" alt="Background preview" class="max-h-[180px] w-auto object-contain bg-black/30 border border-white/10" style="border-radius:12px"><span id="bgFileName" class="font-mono text-[11px] text-white/60"></span><button id="removeBg" class="font-mono text-[11px] px-3 py-1 rounded-none bg-white/10 border border-white/10">Remove</button></div>
     </label>
   </div>
 
@@ -174,7 +174,7 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="fontGrid" class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3"></div>
-    <div id="customFontWrap" class="hidden mt-3"><input id="customFont" placeholder="Describe custom font..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customFontWrap" class="hidden mt-3"><input id="customFont" placeholder="Describe custom font..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 14 Text Color -->
@@ -184,7 +184,7 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       <span class="font-mono text-[10px] tracking-widest px-2 py-1 rounded-none bg-[#A855F7] text-white">PICK ONE</span>
     </div>
     <div id="textColorGrid" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3"></div>
-    <div id="customTextColorWrap" class="hidden mt-3"><input id="customTextColor" placeholder="Add custom text color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/25" style="border-radius:12px"></div>
+    <div id="customTextColorWrap" class="hidden mt-3"><input id="customTextColor" placeholder="Add custom text color..." class="w-full px-4 py-3 text-[14px] placeholder:text-white/40" style="border-radius:12px"></div>
   </div>
 
   <!-- 15 Platform -->
@@ -209,14 +209,14 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">17</span> Use-Case Scenario</div>
     <div class="text-[11px] text-white/30 mt-1">Optional — left blank means omitted from frame 4, unless AI Auto-Fill suggests one.</div>
-    <textarea id="useCase" rows="3" placeholder="e.g. Morning run through the city, late-night studio session..." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25 resize-none" style="border-radius:12px"></textarea>
+    <label for="useCase" class="sr-only">Use-Case Scenario</label><textarea id="useCase" aria-label="Use-Case Scenario" rows="3" placeholder="e.g. Morning run through the city, late-night studio session..." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40 resize-none" style="border-radius:12px"></textarea>
   </div>
 
   <!-- 18 Lifestyle -->
   <div class="card rounded-[16px] p-5 md:p-6">
     <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/35"><span class="text-white/20">18</span> Lifestyle / Environment Context</div>
     <div class="text-[11px] text-white/30 mt-1">Optional — left blank means omitted from frame 5, unless AI Auto-Fill suggests one.</div>
-    <textarea id="lifestyle" rows="3" placeholder="e.g. Minimal apartment, soft daylight, linen and concrete..." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/25 resize-none" style="border-radius:12px"></textarea>
+    <label for="lifestyle" class="sr-only">Lifestyle Context</label><textarea id="lifestyle" aria-label="Lifestyle Context" rows="3" placeholder="e.g. Minimal apartment, soft daylight, linen and concrete..." class="w-full mt-3 px-4 py-3 text-[14px] placeholder:text-white/40 resize-none" style="border-radius:12px"></textarea>
   </div>
 
   <!-- Output -->
@@ -242,7 +242,7 @@ input:focus, textarea:focus, select:focus{ outline:none; border-color:rgba(168,8
       </div>
       <div class="mt-4">
         <div class="font-mono text-[11px] tracking-[0.12em] uppercase text-white/30">Plain text for Flow / Runway / Kling</div>
-        <textarea id="plainText" rows="12" class="w-full mt-2 p-3 font-mono text-[11px] leading-relaxed text-white/75 resize-none" style="border-radius:12px; background:rgba(0,0,0,0.4)"></textarea>
+        <label for="plainText" class="sr-only">Plain text output</label><textarea id="plainText" aria-label="Plain text output" rows="12" class="w-full mt-2 p-3 font-mono text-[11px] leading-relaxed text-white/75 resize-none" style="border-radius:12px; background:rgba(0,0,0,0.4)"></textarea>
       </div>
     </div>
   </div>
@@ -277,21 +277,23 @@ let state={ category:"", material:"", colors:new Set(), tone:"", bg:"", font:"",
 
 function makeChip(label, grid, stateKey, isMulti, isGreen, customId){
   const b=document.createElement('button');
+  b.type='button';
   b.className='chip rounded-none py-3 text-[13px] font-medium text-center px-2 leading-tight';
+  b.setAttribute('aria-pressed','false');
   if(label==="Custom") b.innerHTML='<span class="inline-flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Custom</span>';
   else if(label.includes("\n")) b.innerHTML=label.replace("\n",'<br><span class="text-white/40 text-[11px]">')+'</span>';
   else b.textContent=label;
   b.onclick=()=>{
     if(isMulti){
       const set = state[stateKey];
-      if(set.has(label)){ set.delete(label); b.classList.remove(isGreen?'active-green':'active'); }
-      else{ set.add(label); b.classList.add(isGreen?'active-green':'active'); }
+      if(set.has(label)){ set.delete(label); b.classList.remove(isGreen?'active-green':'active'); b.setAttribute('aria-pressed','false'); }
+      else{ set.add(label); b.classList.add(isGreen?'active-green':'active'); b.setAttribute('aria-pressed','true'); }
       if(label==="Custom" && customId) document.getElementById(customId).classList.toggle('hidden', !set.has("Custom") && !state[stateKey].has("Custom"));
-      // for single custom with isMulti false but label Custom, handle below
     } else {
-      [...grid.children].forEach(x=>x.classList.remove('active'));
-      if(state[stateKey]===label){ state[stateKey]=""; if(customId) document.getElementById(customId).classList.add('hidden'); }
-      else{ b.classList.add('active'); state[stateKey]=label; if(customId) document.getElementById(customId).classList.toggle('hidden', label!=="Custom"); }
+      const wasActive = state[stateKey]===label;
+      [...grid.children].forEach(x=>{ x.classList.remove('active'); x.setAttribute('aria-pressed','false'); });
+      if(wasActive){ state[stateKey]=""; if(customId) document.getElementById(customId).classList.add('hidden'); }
+      else{ b.classList.add('active'); b.setAttribute('aria-pressed','true'); state[stateKey]=label; if(customId) document.getElementById(customId).classList.toggle('hidden', label!=="Custom"); }
     }
     updateFilled();
   };
@@ -430,27 +432,29 @@ function build(){
   return {master, frames, audio, meta:{name, brand, cat, mat, colorStr, aspect}};
 }
 
+function escapeHtml(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 function render(board){
   document.getElementById('outputCard').classList.remove('hidden');
   document.getElementById('masterPrompt').textContent=board.master;
+  // safe tags — text is user-controlled, so escape
   document.getElementById('masterTags').innerHTML=[
-    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white text-black">${board.meta.cat}</span>`,
-    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.mat}</span>`,
-    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.colorStr}</span>`,
-    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${board.meta.aspect}</span>`,
+    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white text-black">${escapeHtml(board.meta.cat)}</span>`,
+    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${escapeHtml(board.meta.mat)}</span>`,
+    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${escapeHtml(board.meta.colorStr)}</span>`,
+    `<span class="font-mono text-[10px] px-2 py-1 rounded-none bg-white/10 border border-white/10 text-white/60">${escapeHtml(board.meta.aspect)}</span>`,
   ].join('');
-  document.getElementById('frames').innerHTML=board.frames.map(f=>`
-    <div class="overflow-hidden border border-white/10 bg-black/30" style="border-radius:12px">
-      <div class="flex items-center justify-between px-3 py-2 bg-white/[0.04] border-b border-white/10">
-        <span class="font-mono text-[11px] text-white/80">${f.title}</span>
-        <span class="font-mono text-[10px] text-white/35">${f.shot}</span>
-      </div>
-      <div class="p-3">
-        <p class="text-[13px] leading-relaxed text-white/75">${f.prompt}</p>
-        <button class="mt-2 font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/10 border border-white/10 hover:bg-white/15" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>toast('Copied frame'))">Copy frame</button>
-      </div>
-    </div>
-  `).join('');
+  // Build frames with safe text nodes (avoid innerHTML XSS from user input)
+  const framesEl=document.getElementById('frames');
+  framesEl.innerHTML='';
+  board.frames.forEach(f=>{
+    const wrap=document.createElement('div');
+    wrap.className='overflow-hidden border border-white/10 bg-black/30';
+    wrap.style.borderRadius='12px';
+    wrap.innerHTML=`<div class="flex items-center justify-between px-3 py-2 bg-white/[0.04] border-b border-white/10"><span class="font-mono text-[11px] text-white/80">${escapeHtml(f.title)}</span><span class="font-mono text-[10px] text-white/35">${escapeHtml(f.shot)}</span></div><div class="p-3"><p class="text-[13px] leading-relaxed text-white/75"></p><button class="mt-2 font-mono text-[11px] px-2.5 py-1 rounded-none bg-white/10 border border-white/10 hover:bg-white/15">Copy frame</button></div>`;
+    wrap.querySelector('p').textContent=f.prompt;
+    wrap.querySelector('button').onclick=function(){ navigator.clipboard.writeText(f.prompt).then(()=>toast('Copied frame')); };
+    framesEl.appendChild(wrap);
+  });
   document.getElementById('audioLine').textContent=board.audio;
   const plain=`${board.master}\n\n` + board.frames.map(f=>`${f.title} [${f.shot}]\n${f.prompt}`).join('\n\n') + `\n\nAUDIO\n${board.audio}`;
   document.getElementById('plainText').value=plain;
